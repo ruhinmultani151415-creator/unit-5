@@ -1,0 +1,24 @@
+//append content to a given file
+#include <stdio.h>
+
+int main()
+{
+FILE *fp;
+
+fp = fopen("data.txt", "a");
+
+if (fp == NULL)
+{
+    printf("File cannot be opened");
+    return 1;
+}
+
+fprintf(fp, "\nWelcome to C Programming");
+
+fclose(fp);
+
+printf("Content appended successfully");
+
+return 0;
+
+}
